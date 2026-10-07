@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/placeholder_main"
+    android:background="@color/black">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_middle_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_play"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_play"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_l"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_time"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_xxxl"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ordinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_ordinal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xxl"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team1_plus1"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_plus1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/team1_plus2"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team1_plus2"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_plus2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/team1_plus3"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team1_plus1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team1_plus3"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_plus3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/guideline_middle_top"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team1_plus2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/team1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_team1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/team1_points"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/team1_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_team1_points"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_largest"
+        app:layout_constraintBottom_toTopOf="@id/guideline_middle_top"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/team1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_separator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_separator"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xxxl"
+        app:layout_constraintBottom_toTopOf="@id/guideline_middle_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_middle_top" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team2_plus1"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_plus1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/team2_plus2"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_middle_bottom" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team2_plus2"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_plus2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/team2_plus3"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team2_plus1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team2_plus3"
+        android:layout_width="@dimen/size_xxl"
+        android:layout_height="@dimen/size_xxl"
+        android:padding="0dp"
+        android:text="@string/contador_plus3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_l"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team2_plus2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/team2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_team2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/team2_points"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_middle_bottom"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/team2_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_team2_points"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_largest"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/team2" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_fouls"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/guideline_bottom" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/separator_fouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_separator"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_m"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@id/fouls" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/team1_fouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_team1_fouls"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/text_xxl"
+        app:layout_constraintBottom_toBottomOf="@id/separator_fouls"
+        app:layout_constraintEnd_toStartOf="@id/separator_fouls"
+        app:layout_constraintTop_toTopOf="@id/separator_fouls" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team1_fouls_plus"
+        android:layout_width="@dimen/size_xl"
+        android:layout_height="@dimen/size_xl"
+        android:padding="0dp"
+        android:text="@string/contador_plus"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_m"
+        app:layout_constraintBottom_toBottomOf="@id/team1_fouls"
+        app:layout_constraintEnd_toStartOf="@id/team1_fouls"
+        app:layout_constraintTop_toTopOf="@id/team1_fouls" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/team2_fouls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_team2_fouls"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/text_xxl"
+        app:layout_constraintBottom_toBottomOf="@id/separator_fouls"
+        app:layout_constraintStart_toEndOf="@id/separator_fouls"
+        app:layout_constraintTop_toTopOf="@id/separator_fouls" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/team2_fouls_plus"
+        android:layout_width="@dimen/size_xl"
+        android:layout_height="@dimen/size_xl"
+        android:padding="0dp"
+        android:text="@string/contador_plus"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_m"
+        android:textStyle="bold"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/size_m"
+        app:layout_constraintBottom_toBottomOf="@id/team2_fouls"
+        app:layout_constraintStart_toEndOf="@id/team2_fouls"
+        app:layout_constraintTop_toTopOf="@id/team2_fouls" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_edit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_s"
+        android:textStyle="bold"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_bottom" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contador_share"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_s"
+        android:textStyle="bold"
+        app:backgroundTint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/guideline_bottom" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

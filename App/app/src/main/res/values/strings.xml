@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">App</string>
+
+    <string name="contador_time">10:00</string>
+    <string name="contador_ordinal">1.º</string>
+    <string name="contador_team1">Equipo 1</string>
+    <string name="contador_team1_points">34</string>
+    <string name="contador_team2">Equipo 2</string>
+    <string name="contador_team2_points">18</string>
+    <string name="contador_fouls">Faltas</string>
+    <string name="contador_team1_fouls">0</string>
+    <string name="contador_team2_fouls">0</string>
+    <string name="contador_separator">X</string>
+    <string name="contador_plus1">+1</string>
+    <string name="contador_plus2">+2</string>
+    <string name="contador_plus3">+3</string>
+    <string name="contador_plus">+</string>
+    <string name="contador_edit">EDITAR</string>
+    <string name="contador_share">COMPARTIR</string>
+    <string name="contador_play">▶</string>
+
+    <string name="exam_title">Examen de Android</string>
+    <string name="exam_sec1">1. Datos del Alumno</string>
+    <string name="exam_hint_name">Nombre completo</string>
+    <string name="exam_hint_email">Correo electrónico</string>
+    <string name="exam_pts">Pts</string>
+
+    <string name="exam_sec2">2. Selecciona la respuesta correcta</string>
+    <string name="exam_q2">¿Qué componente se utiliza para crear diseños flexibles?</string>
+    <string name="exam_rb_linear">LinearLayout</string>
+    <string name="exam_rb_constraint">ConstraintLayout</string>
+    <string name="exam_rb_frame">FrameLayout</string>
+
+    <string name="exam_sec3">3. Selecciona todas las que apliquen</string>
+    <string name="exam_q3">¿Cuáles son componentes de la arquitectura Android?</string>
+    <string name="exam_cb_activity">Activity</string>
+    <string name="exam_cb_viewmodel">ViewModel</string>
+    <string name="exam_cb_javascript">JavaScript</string>
+    <string name="exam_cb_repo">Repository</string>
+
+    <string name="exam_sec4">4. Pregunta de desarrollo</string>
+    <string name="exam_hint_q4">Explica qué es Dependency Injection</string>
+    <string name="exam_btn_send">Enviar Examen</string>
+</resources>
