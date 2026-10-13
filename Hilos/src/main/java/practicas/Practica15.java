@@ -8,7 +8,7 @@ private int contadorIncrementAndGet() {
     return contador;
 }
 
-void main() throws InterruptedException {
+void main() {
     var atomicContador = new AtomicInteger();
     var execution = (Consumer<Supplier<Integer>>) incrementMethod -> {
         for (int i = 0; i < 10; i++) runAsync(() -> {
