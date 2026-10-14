@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">App</string>
 
+    <string name="item_list_add">Añadir Item</string>
+
     <string name="contador_time">10:00</string>
     <string name="contador_ordinal">1.º</string>
     <string name="contador_team1">Equipo 1</string>
