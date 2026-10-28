@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tres en Raya</title>
+    <style>
+        html {
+            background: #242222;
+        }
+        body {
+            color: #dadada;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .board {
+            display: inline-grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 4px;
+            background-color: #000000;
+            border: 4px solid #000000;
+            margin-top: 20px;
+        }
+
+        .cell {
+            background-color: #242222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #e3e3e3;
+            border: 1px solid #000000;
+            transition: background-color 0.2s;
+        }
+
+        .cell:hover {
+            background-color: #656565;
+        }
+
+        .menu-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #dadada;
+            text-decoration: none;
+            border: 1px solid #555;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .menu-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<h1 th:unless="${gameOver}" th:text="'Turno del jugador ' + ${currentPlayerName}"></h1>
+<h1 th:if="${gameOver}">
+    <span th:if="${winnerName != null}" th:text="'¡Ha ganado ' + ${winnerName} + '!'"></span>
+    <span th:unless="${winnerName != null}">¡Empate!</span>
+</h1>
+
+<div class="board">
+    <th:block th:each="row, rowStat : ${board}">
+        <th:block th:each="cell, colStat : ${row}">
+
+            <a th:href="${gameOver} ? '#' : @{~/game(column=${colStat.index}, row=${rowStat.index})}"
+               class="cell"
+               th:text="${cell != null and cell.name() == 'FirstPlayer' ? firstPlayerChar :
+               (cell != null and cell.name() == 'SecondPlayer' ? secondPlayerChar : '')}">
+            </a>
+
+        </th:block>
+    </th:block>
+</div>
+
+<div th:if="${gameOver}">
+    <a th:href="@{/}" class="menu-btn">Volver al menú</a>
+</div>
+
+</body>
+</html>

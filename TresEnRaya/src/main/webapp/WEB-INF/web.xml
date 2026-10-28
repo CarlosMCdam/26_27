@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <context-param>
+        <param-name>Content</param-name>
+        <param-value>text/html;charset=UTF-8</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>FirstPlayerChar</param-name>
+        <param-value>X</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>SecondPlayerChar</param-name>
+        <param-value>O</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>TemplateEngineAttribute</param-name>
+        <param-value>engine</param-value>
+    </context-param>
+    
+    <context-param>
+        <param-name>BoardAttribute</param-name>
+        <param-value>board</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>TurnAttribute</param-name>
+        <param-value>turn</param-value>
+    </context-param>
+</web-app>
